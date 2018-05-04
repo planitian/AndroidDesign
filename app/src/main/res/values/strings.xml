@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Guhao</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loginuser">http://10.0.0.2:8080/test/ajax/loginuser.action</string>
+    <string name="requestkeshi">http://10.0.0.2:8080/test/ajax/requestkeshi.action</string>
+    <string name="requestempl">http://10.0.0.2:8080/test/ajax/requestempl.action</string>
+    <string name="requestshoucang">http://10.0.0.2:8080/test/ajax/requestshoucang.action</string>
+    <string name="requesttime">http://10.0.0.2:8080/test/ajax/requesttime.action</string>
+    <string name="requestaddyuyue">http://10.0.0.2:8080/test/ajax/requestaddyuyue.action</string>
+    <string name="requestyuyue">http://10.0.0.2:8080/test/ajax/requestyuyue.action</string>
+    <string name="requestremoveyuyue">http://10.0.0.2:8080/test/ajax/requestremoveyuyue.action</string>
+    <string name="requestremovefav">http://10.0.0.2:8080/test/ajax/requestremovefav.action</string>
+    <string name="requestrequestfav">http://10.0.0.2:8080/test/ajax/requestrequestfav.action</string>
+    <string name="requestadduser">http://10.0.0.2:8080/test/ajax/requestadduser.action</string>
+    <string name="requestupdateuser">http://10.0.0.2:8080/test/ajax/requestupdateuser.action</string>
+</resources>

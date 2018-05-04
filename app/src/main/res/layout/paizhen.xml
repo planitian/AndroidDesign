@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+   <TextView
+       android:id="@+id/date"
+       android:layout_width="0dp"
+       android:layout_height="30dp"
+       android:layout_weight="2"
+       android:text="2007-08-01"
+       android:gravity="center"
+       />
+  <TextView
+      android:id="@+id/xingqi"
+      android:layout_width="0dp"
+      android:layout_height="30dp"
+      android:layout_weight="1"
+      android:text="星期四"
+      android:gravity="center"
+
+      />
+    <TextView
+        android:id="@+id/am"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="2"
+        android:text="08:00-12:00"
+        android:gravity="center"
+        android:clickable="true"
+         android:focusable="false"
+        />
+    <TextView
+        android:id="@+id/pm"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="2"
+        android:text="12:00-16:00"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="false"
+
+        />
+</LinearLayout>

@@ -1,0 +1,84 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.zfh.Fragment.paizhenFragment">
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/keshitoobar"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="@color/blue"
+       app:contentInsetStart="0dp"
+       >
+       <TextView
+           android:id="@+id/biaoti"
+           android:layout_width="160dp"
+           android:layout_height="match_parent"
+           android:text="选择预约"
+           android:gravity="center"
+           android:textSize="20sp"
+           android:layout_gravity="center"
+           android:background="@color/blue"
+           android:textColor="@color/white"
+           />
+
+   </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/hengbiao"
+
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="日期"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="星期"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="上午时间"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="下午时间"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <ListView
+            android:id="@+id/paizhen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/hengbiao"
+            android:padding="10dp"
+            ></ListView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

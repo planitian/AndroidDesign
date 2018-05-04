@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/white"
+        android:fontFamily="serif-monospace"
+        android:hint="身份证号"
+        android:paddingLeft="8dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:fontFamily="serif-monospace"
+        android:hint="密码"
+        android:paddingLeft="8dp"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/denglu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/loginbutton"
+        android:text="登陆"
+        android:textColor="#FFFFFF"
+        android:textSize="23dp"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="5dp"
+
+        >
+        <CheckBox
+            android:id="@+id/xianshi"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:text="显示密码"
+            android:textColor="@color/blue"
+            />
+        <CheckBox
+            android:id="@+id/jilu"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:text="记录密码"
+            android:textColor="@color/blue"
+            android:layout_alignParentRight="true"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp">
+       <TextView
+           android:id="@+id/wangji"
+           android:layout_width="100dp"
+           android:layout_height="32dp"
+           android:text="忘记密码?"
+           android:textColor="@color/blue"
+           android:gravity="center"
+           android:clickable="true"
+           />
+
+
+
+        <TextView
+            android:id="@+id/zhuce"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:text="注册用户"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+<Button
+    android:id="@+id/jinru"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+
+    android:text="进入主界面"/>
+
+
+</LinearLayout>

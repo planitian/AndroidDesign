@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/first_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/first_viewpager"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:clickable="false"
+        >
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:clickable="false"
+            android:background="@color/transparent"
+
+            />
+
+        <RadioButton
+            android:id="@+id/first_one"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:button="@null"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:background="@drawable/firsthuadong"
+            android:layout_marginEnd="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/first_two"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:button="@null"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/firsthuadong"/>
+
+        <RadioButton
+            android:id="@+id/first_three"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:button="@null"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:background="@drawable/firsthuadong"/>
+
+        <RadioButton
+            android:id="@+id/first_tiaoguo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:text="跳过"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:clickable="false"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+
+</RelativeLayout>

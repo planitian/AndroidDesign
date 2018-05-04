@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item android:title="修改信息"
+        android:id="@+id/xiugaixinxin"
+        />
+    <item android:id="@+id/qiehuan"
+         android:title="切换账号"
+        />
+
+
+</group>
+    <item android:title="1"/>
+    <item android:title="2"
+        />
+    <item android:title="3"
+        />
+    <item android:title="高级设置">
+        <menu>
+         <item android:id="@+id/exit"
+                android:title="退出程序"
+             />
+            <item android:id="@+id/lianxin"
+                  android:title="联系开发者"
+                />
+        </menu>
+
+    </item>
+
+</menu>
