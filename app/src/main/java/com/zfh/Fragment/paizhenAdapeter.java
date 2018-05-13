@@ -70,8 +70,6 @@ public class paizhenAdapeter extends BaseAdapter {
                 @Override
                 public void onClick(View v) {
                     call.timedialog(time.getAm(),time.getDate(),time.getEmployeeid());
-
-
                 }
             });
         }
