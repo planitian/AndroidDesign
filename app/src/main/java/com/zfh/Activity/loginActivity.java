@@ -70,28 +70,29 @@ public class loginActivity extends AppCompatActivity {
         denglu = (Button) findViewById(R.id.denglu);
         xianshi = (CheckBox) findViewById(R.id.xianshi);
         zhuce = (TextView) findViewById(R.id.zhuce);
-        Button jinru = (Button) findViewById(R.id.jinru);
-        jinru.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                HashMap map = new HashMap();
-                //      map.put("personid",json.getString("personid"));
-                map.put("personid", "001");
-                HashMap map1 = new HashMap();
-                map1.put("personid", "001");
-                Myapplication.setMapshuju(map1);
-                String gg = "001";
-                String aa = "撒大三大四的";
-                Myapplication.setGg(aa);
-                Myapplication myapplication = (Myapplication) getApplication();
-
-                myapplication.setTest(gg);
-                myapplication.setMap(map);
-                Intent intent = new Intent(loginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+        //这是开发时候用来不输入密码直接进入的
+//        Button jinru = (Button) findViewById(R.id.jinru);
+//        jinru.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                HashMap map = new HashMap();
+//                //      map.put("personid",json.getString("personid"));
+//                map.put("personid", "001");
+//                HashMap map1 = new HashMap();
+//                map1.put("personid", "001");
+//                Myapplication.setMapshuju(map1);
+//                String gg = "001";
+//                String aa = "撒大三大四的";
+//                Myapplication.setGg(aa);
+//                Myapplication myapplication = (Myapplication) getApplication();
+//
+//                myapplication.setTest(gg);
+//                myapplication.setMap(map);
+//                Intent intent = new Intent(loginActivity.this, MainActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
 
         if (sharedPreferences.getBoolean("jilu", false)) {
             String usernam = sharedPreferences.getString("personid", null);
