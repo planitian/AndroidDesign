@@ -33,11 +33,11 @@ import org.json.JSONObject;
  */
 
 public class guohaodiaofragment extends DialogFragment implements View.OnClickListener {
-private Yuyue yuyue;
-    private  Handler handler;
+    private Yuyue yuyue;
+    private Handler handler;
     private String result;
     private int postion;
-    private ListView  listView;
+    private ListView listView;
     private call call;
 
     public void setCall(guohaodiaofragment.call call) {
@@ -51,17 +51,17 @@ private Yuyue yuyue;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        yuyue=(Yuyue) getArguments().getSerializable("shuju");
-        postion=(int)getArguments().getInt("position");
+        yuyue = (Yuyue) getArguments().getSerializable("shuju");
+        postion = (int) getArguments().getInt("position");
         super.onCreate(savedInstanceState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-         View view=inflater.inflate(R.layout.guohaodialog,null);
+        View view = inflater.inflate(R.layout.guohaodialog, null);
 
-        TextView shanchu=(TextView)view.findViewById(R.id.guohaodiashanchu);
-        TextView quxiao=(TextView)view.findViewById(R.id.guohaodiaquxiao);
+        TextView shanchu = (TextView) view.findViewById(R.id.guohaodiashanchu);
+        TextView quxiao = (TextView) view.findViewById(R.id.guohaodiaquxiao);
 
         shanchu.setOnClickListener(this);
         quxiao.setOnClickListener(this);
@@ -70,29 +70,28 @@ private Yuyue yuyue;
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.guohaodiashanchu:
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
 
-                        String path=getActivity().getResources().getString(R.string.requestremoveyuyue);
-                        JSONObject jsonObject=new JSONObject();
+                        String path = getActivity().getResources().getString(R.string.requestremoveyuyue);
+                        JSONObject jsonObject = new JSONObject();
                         try {
-                            jsonObject.put("yuyuema",yuyue.getYuyuema());
-                             result= httputill.lianjie(path,jsonObject.toString());
-                            System.out.println("fasongde "+result);
+                            jsonObject.put("yuyuema", yuyue.getYuyuema());
+                            result = httputill.lianjie(path, jsonObject.toString());
+                            System.out.println("fasongde " + result);
 //                             Message message=new Message();
 //                            message.obj=result;
 //                            handler.sendMessage(message);
-                            if (result.equals("sucess")){
+                            if (result.equals("sucess")) {
 //                                            call.remove(postion,true);
-                                       setResult(2,postion);
-                                       }else {
+                                setResult(2, postion);
+                            } else {
 //                                            call.remove(postion,false);
-                                       setResult(3,postion);
-                                       }
-
+                                setResult(3, postion);
+                            }
 
 
                         } catch (JSONException e) {
@@ -142,7 +141,7 @@ private Yuyue yuyue;
 //        // 没有背景颜色
 //        getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 //        WindowManager.LayoutParams layoutParams=getDialog().getWindow().getAttributes();
-//        layoutParams.alpha=10;
+//        layoutParams.alpha=1.0;
 ////        后面的背景不会变暗
 //        layoutParams.dimAmount =0;
 //        layoutParams.height=350;
@@ -151,36 +150,37 @@ private Yuyue yuyue;
 //        super.onStart();
 //    }
 
-    public void setResult(int result_ma,int postion){
-        Log.d("setResult方法调用","s");
-        if (getTargetFragment()==null){
-           return;
+    public void setResult(int result_ma, int postion) {
+        Log.d("setResult方法调用", "s");
+        if (getTargetFragment() == null) {
+            return;
         }
-        Intent intent=new Intent();
-        intent.putExtra("position",postion);
-        getTargetFragment().onActivityResult(1,result_ma,intent);
+        Intent intent = new Intent();
+        intent.putExtra("position", postion);
+        getTargetFragment().onActivityResult(1, result_ma, intent);
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof call){
-            call=(com.zfh.dialog.guohaodiaofragment.call)context;
-            Log.d("onAttach","运行了");
+        if (context instanceof call) {
+            call = (com.zfh.dialog.guohaodiaofragment.call) context;
+            Log.d("onAttach", "运行了");
 
         }
     }
 
     @Override
     public void onStart() {
-        Window window=getDialog().getWindow();
+        Window window = getDialog().getWindow();
         window.setBackgroundDrawableResource(R.drawable.dialog);
-        WindowManager.LayoutParams layoutParams=window.getAttributes();
-        layoutParams.dimAmount=0;
+        WindowManager.LayoutParams layoutParams = window.getAttributes();
+        layoutParams.dimAmount = 0;
         window.setAttributes(layoutParams);
         super.onStart();
     }
-   public interface call{
-        void remove(int position,Boolean xianshi);
+
+    public interface call {
+        void remove(int position, Boolean xianshi);
     }
 }

@@ -237,7 +237,6 @@ public class keshiFragment extends Fragment implements keshiAdapter.call{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home){
-
             if (drawerLayout.isDrawerOpen(Gravity.START)){
                 drawerLayout.closeDrawer(Gravity.START);
             }else {
