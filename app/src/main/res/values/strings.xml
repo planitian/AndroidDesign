@@ -3,16 +3,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="loginuser">http://47.100.254.146:8080/test/ajax/loginuser.action</string>
-    <string name="requestkeshi">http://47.100.254.146:8080/test/ajax/requestkeshi.action</string>
-    <string name="requestempl">http://47.100.254.146:8080/test/ajax/requestempl.action</string>
-    <string name="requestshoucang">http://47.100.254.146:8080/test/ajax/requestshoucang.action</string>
-    <string name="requesttime">http://47.100.254.146:8080/test/ajax/requesttime.action</string>
-    <string name="requestaddyuyue">http://47.100.254.146:8080/test/ajax/requestaddyuyue.action</string>
-    <string name="requestyuyue">http://47.100.254.146:8080/test/ajax/requestyuyue.action</string>
-    <string name="requestremoveyuyue">http://47.100.254.146:8080/test/ajax/requestremoveyuyue.action</string>
-    <string name="requestremovefav">http://47.100.254.146:8080/test/ajax/requestremovefav.action</string>
-    <string name="requestrequestfav">http://47.100.254.146:8080/test/ajax/requestrequestfav.action</string>
-    <string name="requestadduser">http://47.100.254.146:8080/test/ajax/requestadduser.action</string>
-    <string name="requestupdateuser">http://47.100.254.146:8080/test/ajax/requestupdateuser.action</string>
+    <string name="loginuser">http://192.168.2.241:8080/test/ajax/loginuser.action</string>
+    <string name="requestkeshi">http://192.168.2.241:8080/test/ajax/requestkeshi.action</string>
+    <string name="requestempl">http://192.168.2.241:8080/test/ajax/requestempl.action</string>
+    <string name="requestshoucang">http://192.168.2.241:8080/test/ajax/requestshoucang.action</string>
+    <string name="requesttime">http://192.168.2.241:8080/test/ajax/requesttime.action</string>
+    <string name="requestaddyuyue">http://192.168.2.241:8080/test/ajax/requestaddyuyue.action</string>
+    <string name="requestyuyue">http://192.168.2.241:8080/test/ajax/requestyuyue.action</string>
+    <string name="requestremoveyuyue">http://192.168.2.241:8080/test/ajax/requestremoveyuyue.action</string>
+    <string name="requestremovefav">http://192.168.2.241:8080/test/ajax/requestremovefav.action</string>
+    <string name="requestrequestfav">http://192.168.2.241:8080/test/ajax/requestrequestfav.action</string>
+    <string name="requestadduser">http://192.168.2.241:8080/test/ajax/requestadduser.action</string>
+    <string name="requestupdateuser">http://192.168.2.241:8080/test/ajax/requestupdateuser.action</string>
 </resources>

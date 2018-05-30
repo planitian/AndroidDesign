@@ -70,9 +70,9 @@ public class naozhongService extends Service {
                         }
                     }
 
-                    Notification notification = new NotificationCompat.Builder(getApplicationContext()).setSmallIcon(getApplicationContext().getApplicationInfo().icon)
+                    Notification notification = new NotificationCompat.Builder(getApplicationContext(),"1").setSmallIcon(getApplicationContext().getApplicationInfo().icon)
                             .setWhen(System.currentTimeMillis())
-                            .setAutoCancel(true).setChannel("1").setContentText("neirong")
+                            .setAutoCancel(true).setContentText("neirong")
                             .setContentTitle("biaoti")
                             .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.aa2014))
                             .setDefaults(Notification.DEFAULT_ALL)
