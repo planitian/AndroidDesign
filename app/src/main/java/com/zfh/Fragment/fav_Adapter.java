@@ -46,6 +46,9 @@ public class fav_Adapter extends RecyclerView.Adapter {
     }
     //用于向Myrecy 返回它所要求的employeeid号
     public String getemployeeid(int position){
+        if (position<0){
+            throw new ArrayIndexOutOfBoundsException("fac_adapert  postion chucuo ");
+        }
         return favourites.get(position).getEmployeeid();
     }
 

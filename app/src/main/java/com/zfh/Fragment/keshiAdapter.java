@@ -114,9 +114,9 @@ private List<Employee> employeeList;
         viewHolder.name.setText(employee.getName());
         viewHolder.jianjie.setText(employee.getJianjie());
         if (employee.getFavour()){
-            viewHolder.xiai.setBackgroundResource(R.drawable.tab_fav_pre);
-        }else{
             viewHolder.xiai.setBackgroundResource(R.drawable.tab_fac_normal);
+        }else{
+            viewHolder.xiai.setBackgroundResource(R.drawable.tab_fav_pre);
         }
 
         viewHolder.touxiang.setImageBitmap(base64toBitmap(employee.getTouxiang()));
@@ -182,7 +182,7 @@ private List<Employee> employeeList;
     }
 
    public interface call{
-       public void change(int position,JSONObject jsonObject );
+       void change(int position,JSONObject jsonObject );
    }
 }
 

@@ -154,6 +154,7 @@ public class loginActivity extends AppCompatActivity {
                                     }.getType();
                                     Map<String, String> map = new HashMap();
                                     map = gson.fromJson(result, type);
+                                    System.out.println("loginactivity"+result.toString()+"   "+map.toString());
 //                                    map.put("personid",json.getString("personid"));
 //                                    map.put("personid","001");
 //                                    map.put("name",json.getString("username"));

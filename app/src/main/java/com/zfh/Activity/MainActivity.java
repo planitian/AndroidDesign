@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -26,10 +27,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
+import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -72,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements paizhenFragment.O
     private TextView my;
     private DrawerLayout drawer;
     private int level;
+    private  View view;
     private Notifybroadcast notifybroadcast;
     private long olddianji=0;
 
@@ -86,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements paizhenFragment.O
             switch(msg.what){
                 case 0: String text=(String)msg.obj;
                     Toast.makeText(MainActivity.this,text,Toast.LENGTH_SHORT).show();
+                    poowindows();
                     break;
             }
         }
@@ -94,6 +101,7 @@ public class MainActivity extends AppCompatActivity implements paizhenFragment.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.maindrawer);
+
         //注册内部类广播
           notifybroadcast=new Notifybroadcast();
         IntentFilter  intentFilter=new IntentFilter("notify");
@@ -267,6 +275,7 @@ public class MainActivity extends AppCompatActivity implements paizhenFragment.O
                                        String car="添加预约成功";
                                        message.obj=car;
                                         handler.sendMessage(message);
+
                                     }else {
                                         if (jsonObject1.getBoolean("cunzai")){
                                             String car="所选择的日期已有预约，请返回";
@@ -348,5 +357,22 @@ public class MainActivity extends AppCompatActivity implements paizhenFragment.O
         super.onDestroy();
         unregisterReceiver(notifybroadcast);
 
+    }
+    //生成popwindows
+    public void poowindows(){
+        View view= LayoutInflater.from(MainActivity.this).inflate(R.layout.fukuan,null);
+
+        final PopupWindow popupWindow=new PopupWindow(view, ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        popupWindow.setOutsideTouchable(true);
+        Drawable drawable=getDrawable(R.drawable.fukuan);
+        popupWindow.setBackgroundDrawable(drawable);
+        Button quxiao=(Button)view.findViewById(R.id.fukuan_quxiao);
+        quxiao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              popupWindow.dismiss();
+            }
+        });
+        popupWindow.showAtLocation(getWindow().getDecorView(),Gravity.BOTTOM,0,0);
     }
 }
