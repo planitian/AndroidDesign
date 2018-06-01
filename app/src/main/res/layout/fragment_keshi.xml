@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.zfh.Fragment.keshiFragment">
+    tools:context="com.zfh.Fragment.keshiFragment"
+    android:layoutAnimation="@anim/liebiao"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.Toolbar
@@ -37,7 +39,7 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:layout_marginTop="60dp"
-
+         android:layoutAnimation="@anim/zongti_up"
         ></ListView>
 
 </FrameLayout>

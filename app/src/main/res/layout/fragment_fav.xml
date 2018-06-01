@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.zfh.Fragment.favFragment">
+    tools:context="com.zfh.Fragment.favFragment"
+    android:layoutAnimation="@anim/liebiao"
+    >
     <android.support.v7.widget.Toolbar
         android:id="@+id/favtoolbar"
         android:layout_width="match_parent"
@@ -26,6 +28,6 @@
       android:layout_height="match_parent"
       android:layout_marginTop="60dp"
       android:paddingLeft="10dp"
-
+      android:layoutAnimation="@anim/zongti_up"
       ></com.zfh.dingyiview.Myrecy>
 </FrameLayout>
