@@ -366,11 +366,19 @@ public class MainActivity extends AppCompatActivity implements paizhenFragment.O
         popupWindow.setOutsideTouchable(true);
         Drawable drawable=getDrawable(R.drawable.fukuan);
         popupWindow.setBackgroundDrawable(drawable);
+        popupWindow.setAnimationStyle(R.style.pop_donghua);
         Button quxiao=(Button)view.findViewById(R.id.fukuan_quxiao);
+        Button queding=(Button)view.findViewById(R.id.fukuan_tijiao);
         quxiao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               popupWindow.dismiss();
+            }
+        });
+        queding.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
             }
         });
         popupWindow.showAtLocation(getWindow().getDecorView(),Gravity.BOTTOM,0,0);

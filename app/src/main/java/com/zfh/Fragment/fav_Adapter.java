@@ -46,9 +46,8 @@ public class fav_Adapter extends RecyclerView.Adapter {
     }
     //用于向Myrecy 返回它所要求的employeeid号
     public String getemployeeid(int position){
-        if (position<0){
-            throw new ArrayIndexOutOfBoundsException("fac_adapert  postion chucuo ");
-        }
+        System.out.println("getemployeeid  "+position);
+
         return favourites.get(position).getEmployeeid();
     }
 
@@ -62,10 +61,17 @@ public class fav_Adapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder,  int position) {
+        System.out.println("position "+position);
+        if (position<0){
+            position=favourites.size();
+        }
+        final int tidai=position;
+        System.out.println("tidai "+tidai);
           Favviewholder favviewholder=(Favviewholder)holder;
+//        System.out.println(getItemCount()+"     "+favourites.size());
          favviewholder.touxiang.setImageBitmap(base64toBitmap(favourites.get(position).getEmploimage()));
-        favviewholder.keshi.setText(favourites.get(position).getEmployeeid()+position+getemployeeid(position));
+        favviewholder.keshi.setText(favourites.get(position).getEmployeeid()+position);
         favviewholder.employee.setText(favourites.get(position).getEmployeename());
         favviewholder.quxiao.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,13 +84,13 @@ public class fav_Adapter extends RecyclerView.Adapter {
                             public void handleMessage(Message msg) {
                                 super.handleMessage(msg);
                                 Toast.makeText(context,"取消收藏",Toast.LENGTH_SHORT).show();
-                                favourites.remove(position);
-                                callback.setlastposition(position);
-                                notifyItemRemoved(position);
-                                notifyItemRangeChanged(position,favourites.size()-position);
+                                favourites.remove(tidai);
+                                callback.setlastposition(tidai);
+                                notifyItemRemoved(tidai);
+                                notifyItemRangeChanged(tidai,favourites.size()-tidai);
                             }
                         };
-                            String empl=favourites.get(position).getEmployeeid();
+                            String empl=favourites.get(tidai).getEmployeeid();
                             String userid= (String) Myapplication.getMapshuju().get("personid");
                         JSONObject jsonObject=new JSONObject();
                         try {

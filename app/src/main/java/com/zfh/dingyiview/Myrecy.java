@@ -163,11 +163,19 @@ public class Myrecy extends RecyclerView implements fav_Adapter.callback, Gestur
         switch (e.getAction()){
             case MotionEvent.ACTION_UP:
                 if (lastdownx==e.getRawX()&&lastdowny==e.getRawY()){
-                    itembuju view1 = (itembuju) findChildViewUnder(e.getX(), e.getY());
-                    int position = getChildAdapterPosition(view1);
-                    fav_Adapter fav_adapter = (fav_Adapter) getAdapter();
-                    String employeeid = fav_adapter.getemployeeid(position);
-                    callback.shengchengpaizhen(employeeid);
+                    itembuju view1 = (itembuju) findChildViewUnder(e.getRawX(), e.getRawY());
+                    int position;
+                    if (view1!=null){
+                        position = getChildAdapterPosition(view1);
+                    }else {
+                        position=((fav_Adapter)getAdapter()).getItemCount();
+                    }
+
+                        fav_Adapter fav_adapter = (fav_Adapter) getAdapter();
+                        String employeeid = fav_adapter.getemployeeid(position);
+                        callback.shengchengpaizhen(employeeid);
+
+
                 }
                 first = 0;
                 lanjie=true;
@@ -277,10 +285,13 @@ public class Myrecy extends RecyclerView implements fav_Adapter.callback, Gestur
     public void zhuangpaizhen(float x, float y) {
         itembuju view1 = (itembuju) findChildViewUnder(x, y);
         int position = getChildAdapterPosition(view1);
-        fav_Adapter fav_adapter = (fav_Adapter) getAdapter();
-        String employeeid = fav_adapter.getemployeeid(position-1);
-        System.out.println("employeeid"+employeeid+(position-1));
-        callback.shengchengpaizhen(employeeid);
+        if (position<0){
+           position=((fav_Adapter)getAdapter()).getItemCount()-1;
+        }
+            fav_Adapter fav_adapter = (fav_Adapter) getAdapter();
+            String employeeid = fav_adapter.getemployeeid(position-1);
+            System.out.println("employeeid"+employeeid+(position-1));
+            callback.shengchengpaizhen(employeeid);
     }
 
     public interface Callback {

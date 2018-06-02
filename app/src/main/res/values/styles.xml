@@ -12,5 +12,9 @@
         <item name="android:clickable">true</item>
 
     </style>
+   <style name="pop_donghua">
+       <item name="android:windowEnterAnimation">@anim/popjinru</item>
+       <item name="android:windowExitAnimation">@anim/popexit</item>
+   </style>
 
 </resources>

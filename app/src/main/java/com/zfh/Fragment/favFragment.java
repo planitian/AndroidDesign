@@ -109,6 +109,7 @@ public class favFragment extends Fragment implements Myrecy.Callback {
         actionBarDrawerToggle.syncState();
          myrecy=(Myrecy)view.findViewById(R.id.fav_list);
         myrecy.setCallback(favFragment.this);
+        myrecy.scheduleLayoutAnimation();
         myrecy.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL));
         mytask=new mytask();
         mytask.execute(parama);
