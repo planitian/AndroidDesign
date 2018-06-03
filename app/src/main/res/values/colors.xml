@@ -8,7 +8,7 @@
     <color name="gray">#EDEDED</color>
     <color name="yellow">#FFC800</color>
     <color name="transparent">#00FFFFFF</color>
-    <color name="gree">#C0FF3E</color>
+    <color name="gree">#F4F4F4</color>
     <color name="tabbg">#FFC4C4C4</color>
     <color name="blank">#000000</color>
 </resources>

@@ -97,11 +97,13 @@ public class naozhongService extends Service {
                     jsonObject.put("personid", user);
                     String path = getString(R.string.requestyuyue);
                     result = httputill.lianjie(path, jsonObject.toString());
-                    System.out.println("result" + result);
-                    Message message = Message.obtain();
-                    message.obj = result;
-                    message.what = 10;
-                    handler.sendMessage(message);
+                    if (!result.equals("kong")) {
+                        System.out.println("result" + result);
+                        Message message = Message.obtain();
+                        message.obj = result;
+                        message.what = 10;
+                        handler.sendMessage(message);
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

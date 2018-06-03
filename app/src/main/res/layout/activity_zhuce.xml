@@ -8,14 +8,17 @@
    android:rowCount="8"
     android:background="@color/gray"
     android:paddingRight="10dp"
-    tools:context="com.zfh.Activity.ZhuceActivity">
+    tools:context="com.zfh.Activity.ZhuceActivity"
+    >
   <android.support.v7.widget.Toolbar
       android:id="@+id/zhuce_toolbar"
       android:layout_columnSpan="2"
       android:layout_width="match_parent"
       android:layout_height="?attr/actionBarSize"
       app:contentInsetStart="0dp"
-      ></android.support.v7.widget.Toolbar>
+      >
+
+  </android.support.v7.widget.Toolbar>
     <TextView
         android:layout_height="40dp"
         android:layout_columnWeight="1"
@@ -124,7 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_columnSpan="2"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="60dp"
         >
         <Button
             android:id="@+id/zhuce_reset"
@@ -133,6 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
+
             android:background="@drawable/loginbutton"
             />
       <Button
